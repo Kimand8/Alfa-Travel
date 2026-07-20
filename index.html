@@ -1,259 +1,1229 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alfa Travel</title>
+
+<title>ALFA AI Travel — Умный подбор путешествий</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Inter,Arial,sans-serif;
 }
+
+
+html{
+    scroll-behavior:smooth;
+}
+
 
 body{
-    background:#f4f7fb;
-    color:#333;
+    background:#f8fafc;
+    color:#0f172a;
 }
 
+
+/* HEADER */
+
 header{
-    background:#0088cc;
-    color:white;
-    padding:20px;
+
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:90%;
+    max-width:1200px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:18px 30px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
+    z-index:100;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.08);
+
 }
 
-header ul{
+
+.logo{
+
+    font-size:26px;
+    font-weight:800;
+
+    color:#0284c7;
+
+}
+
+
+
+nav{
+
     display:flex;
-    list-style:none;
-    gap:20px;
+    gap:25px;
+
 }
 
-header a{
-    color:white;
+
+nav a{
+
     text-decoration:none;
+    color:#334155;
+
+    font-weight:500;
+
 }
+
+
+.login{
+
+    border:none;
+
+    background:#0284c7;
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+
+
+/* HERO */
+
 
 .hero{
-    height:80vh;
-    background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") center/cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
+
+
+height:100vh;
+
+min-height:700px;
+
+
+background:
+
+linear-gradient(
+rgba(15,23,42,.45),
+rgba(15,23,42,.75)
+),
+
+url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80")
+
+center/cover;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+color:white;
+
+
 }
 
-.hero div{
-    background:rgba(0,0,0,.55);
-    padding:40px;
-    border-radius:10px;
-    color:white;
+
+.hero-content{
+
+max-width:900px;
+
+padding:20px;
+
 }
+
+
+.badge{
+
+display:inline-block;
+
+background:
+rgba(255,255,255,.15);
+
+backdrop-filter:blur(10px);
+
+padding:10px 20px;
+
+border-radius:50px;
+
+margin-bottom:30px;
+
+}
+
 
 .hero h1{
-    font-size:50px;
-    margin-bottom:20px;
+
+font-size:72px;
+
+line-height:1.05;
+
+font-weight:800;
+
 }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#ff9800;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
+
+.hero h1 span{
+
+color:#38bdf8;
+
 }
+
+
+.hero p{
+
+font-size:22px;
+
+margin:30px auto;
+
+max-width:650px;
+
+color:#e2e8f0;
+
+}
+
+
+
+/* SEARCH */
+
+
+.search-box{
+
+background:white;
+
+padding:10px;
+
+border-radius:25px;
+
+display:flex;
+
+max-width:700px;
+
+margin:auto;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.25);
+
+}
+
+
+.search-box input{
+
+flex:1;
+
+border:none;
+
+outline:none;
+
+padding:18px;
+
+font-size:16px;
+
+color:#333;
+
+}
+
+
+
+.search-box button{
+
+border:none;
+
+background:
+
+linear-gradient(
+135deg,
+#0284c7,
+#2563eb
+);
+
+color:white;
+
+padding:18px 35px;
+
+border-radius:18px;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+}
+
+
+
+/* STATS */
+
+
+.stats{
+
+display:flex;
+
+justify-content:center;
+
+gap:50px;
+
+margin-top:50px;
+
+}
+
+
+.stats div{
+
+background:
+rgba(255,255,255,.12);
+
+padding:20px 35px;
+
+border-radius:20px;
+
+backdrop-filter:blur(10px);
+
+}
+
+
+.stats h2{
+
+font-size:32px;
+
+}
+
+
+.stats span{
+
+color:#cbd5e1;
+
+}
+
+
+
+
+
+
+/* GENERAL */
+
 
 section{
-    padding:60px 10%;
+
+padding:100px 8%;
+
 }
 
-h2{
-    text-align:center;
-    margin-bottom:40px;
+
+
+.title{
+
+text-align:center;
+
+margin-bottom:50px;
+
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+
+
+.title h2{
+
+font-size:42px;
+
+margin-bottom:15px;
+
 }
 
-.card{
-    background:white;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+
+.title p{
+
+color:#64748b;
+
+font-size:18px;
+
 }
 
-.card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
+
+
+/* AI BLOCK */
+
+
+.ai-box{
+
+max-width:850px;
+
+margin:auto;
+
+background:white;
+
+border-radius:30px;
+
+padding:35px;
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.08);
+
 }
 
-.card div{
-    padding:20px;
+
+
+.message{
+
+padding:18px;
+
+margin-bottom:15px;
+
+border-radius:20px;
+
+max-width:80%;
+
 }
 
-.price{
-    color:#0088cc;
-    font-size:24px;
-    margin:10px 0;
-    font-weight:bold;
+
+.ai{
+
+background:#f1f5f9;
+
 }
 
-button{
-    background:#0088cc;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:5px;
-    cursor:pointer;
+
+.user{
+
+background:#0284c7;
+
+color:white;
+
+margin-left:auto;
+
 }
 
-.about{
-    text-align:center;
-    line-height:1.7;
+
+.chat-input{
+
+display:flex;
+
+gap:10px;
+
+margin-top:25px;
+
 }
 
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:30px;
+
+.chat-input input{
+
+flex:1;
+
+padding:15px;
+
+border-radius:15px;
+
+border:1px solid #ddd;
+
 }
+
+
+.chat-input button{
+
+background:#0284c7;
+
+color:white;
+
+border:none;
+
+padding:15px 25px;
+
+border-radius:15px;
+
+}
+
+
+
 </style>
 
 </head>
+
+
 <body>
+
 
 <header>
 
-<h2>Alfa Travel</h2>
+<div class="logo">
+🌍 ALFA AI Travel
+</div>
 
-<ul>
-<li><a href="#tours">Туры</a></li>
-<li><a href="#about">О нас</a></li>
-<li><a href="#contacts">Контакты</a></li>
-</ul>
+
+<nav>
+
+<a href="#home">Главная</a>
+
+<a href="#ai">AI</a>
+
+<a href="#tours">Туры</a>
+
+<a href="#contact">Контакты</a>
+
+</nav>
+
+
+<button class="login">
+Войти
+</button>
+
 
 </header>
 
-<section class="hero">
 
-<div>
 
-<h1>Забота о каждом клиенте</h1>
 
-<p>Альфа Тревел это твоя семья в путешествиях.</p>
+<section class="hero" id="home">
 
-<a class="btn" href="#tours">Выбрать тур</a>
+
+<div class="hero-content">
+
+
+<div class="badge">
+✨ AI Travel Assistant
+</div>
+
+
+<h1>
+Умный подбор,
+<br>
+Вашего путешествия
+<span>с AI</span>
+</h1>
+
+
+<p>
+Расскажите о своих желаниях,
+а искусственный интеллект найдёт
+идеальный тур.
+</p>
+
+
+<div class="search-box">
+
+<input placeholder="Например: Вьетнам на двоих в Октябре до 500 000 ₸">
+
+
+<button>
+Найти тур
+</button>
+
 
 </div>
 
+
+<div class="stats">
+
+<div>
+<h2>120+</h2>
+<span>стран</span>
+</div>
+
+
+<div>
+<h2>5000+</h2>
+<span>клиентов</span>
+</div>
+
+
+<div>
+<h2>24/7</h2>
+<span>AI помощь</span>
+</div>
+
+</div>
+
+
+</div>
+
+
 </section>
+
+<!-- TOURS -->
 
 <section id="tours">
 
-<h2>Популярные направления</h2>
+<div class="title">
 
-<div class="cards">
+<h2>
+Популярные направления
+</h2>
 
-<div class="card">
+<p>
+AI выбирает лучшие варианты отдыха
+</p>
 
-<img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80">
+</div>
+
+
+
+<div class="tour-grid">
+
+
+<div class="tour-card">
+
+<img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80">
+
 
 <div>
 
-<h3>Турция</h3>
+<h3>
+🇹🇷 Турция
+</h3>
 
-<p>7 ночей, всё включено</p>
+<p>
+Море • All Inclusive • 5★
+</p>
 
-<div class="price">от 299 000 ₸</div>
+<b>
+от 299 000 ₸
+</b>
 
-<button>Забронировать</button>
+
+<button>
+Подробнее
+</button>
 
 </div>
 
+
 </div>
 
-<div class="card">
+
+
+
+
+<div class="tour-card">
+
+
+<img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=800&q=80">
+
+
+<div>
+
+<h3>
+🇪🇬 Египет
+</h3>
+
+<p>
+Красное море • Дайвинг
+</p>
+
+
+<b>
+от 315 000 ₸
+</b>
+
+
+<button>
+Подробнее
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="tour-card">
+
 
 <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80">
 
-<div>
-
-<h3>Дубай</h3>
-
-<p>Роскошный отдых</p>
-
-<div class="price">от 350 000 ₸</div>
-
-<button>Забронировать</button>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=80">
 
 <div>
 
-<h3>Египет</h3>
-
-<p>Красное море</p>
-
-<div class="price">от 310 000 ₸</div>
-
-<button>Забронировать</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="about" class="about">
-
-<h2>О компании</h2>
+<h3>
+🇦🇪 Дубай
+</h3>
 
 <p>
-
-Alfa Travel помогает жителям Казахстана путешествовать по всему миру без забот.
-
-Мы подбираем лучшие ЦЕНЫ и сопровождаем КЛИЕНТОВ даже после возвращения.
-
+Luxury • Город будущего
 </p>
+
+
+<b>
+от 420 000 ₸
+</b>
+
+
+<button>
+Подробнее
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
-<section id="contacts">
 
-<h2>Контакты</h2>
 
-<p style="text-align:center;font-size:18px;">
-📍 Алматы<br><br>
-📞 +7 (707) 379-00-22<br><br>
-📧 info@Alfatravel.kz
+
+
+<!-- FEATURES -->
+
+
+<section>
+
+
+<div class="title">
+
+<h2>
+Почему AI Travel?
+</h2>
+
+</div>
+
+
+
+<div class="features">
+
+
+<div>
+
+<h3>
+🤖 AI подбор
+</h3>
+
+<p>
+Анализируем бюджет,
+сезон и Ваши пожелания
 </p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+🌎 Цены напрямую от крупнейших операторов
+</h3>
+
+<p>
+От пляжей до горных маршрутов
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+💎 Ai анализирует все ваши пожелания
+</h3>
+
+<p>
+Только подходящие предложения
+</p>
+
+</div>
+
+
+
+</div>
+
+
 
 </section>
 
-<footer>
 
-<p>© 2026 Alfa Travel. Все права защищены.</p>
+
+
+
+<!-- REVIEWS -->
+
+
+<section>
+
+
+<div class="title">
+
+<h2>
+Отзывы
+</h2>
+
+</div>
+
+
+<div class="reviews">
+
+
+<div>
+
+⭐⭐⭐⭐⭐
+
+<p>
+"AI подобрал отличный тур.
+Подсказал лучшие отели для отдыха с детьми."
+
+</p>
+
+<strong>
+Айгерим, Алматы
+</strong>
+
+</div>
+
+
+
+<div>
+
+⭐⭐⭐⭐⭐
+
+<p>
+"Очень удобно.
+Учел мои пожелания чтобы все было в пешей доступности."
+
+</p>
+
+
+<strong>
+Данияр, Астана
+</strong>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer id="contact">
+
+
+<h2>
+🌍 ALFA AI Travel
+</h2>
+
+
+<p>
+Умные путешествия будущего
+</p>
+
+
+<div>
+
+<a href="#">
+Instagram
+</a>
+
+
+<a href="#">
+Telegram
+</a>
+
+
+<a href="#">
+WhatsApp
+</a>
+
+
+</div>
+
+
+<p>
+© 2026 ALFA AI Travel Kazakhstan
+</p>
+
 
 </footer>
 
+
+
+
+
+<style>
+
+
+/* TOURS */
+
+
+.tour-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+
+.tour-card{
+
+background:white;
+
+border-radius:30px;
+
+overflow:hidden;
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+
+
+.tour-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+.tour-card img{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+}
+
+
+
+.tour-card div{
+
+padding:25px;
+
+}
+
+
+
+.tour-card h3{
+
+font-size:26px;
+
+margin-bottom:10px;
+
+}
+
+
+.tour-card p{
+
+color:#64748b;
+
+margin-bottom:15px;
+
+}
+
+
+
+.tour-card b{
+
+display:block;
+
+font-size:24px;
+
+color:#0284c7;
+
+margin-bottom:20px;
+
+}
+
+
+.tour-card button{
+
+border:0;
+
+background:#0284c7;
+
+color:white;
+
+padding:12px 25px;
+
+border-radius:50px;
+
+cursor:pointer;
+
+}
+
+
+
+
+
+/* FEATURES */
+
+
+.features{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+
+
+.features div{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.06);
+
+text-align:center;
+
+}
+
+
+
+
+/* REVIEWS */
+
+
+.reviews{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+
+
+.reviews div{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.06);
+
+}
+
+
+
+.reviews p{
+
+margin:20px 0;
+
+color:#475569;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+background:#0f172a;
+
+color:white;
+
+padding:60px 20px;
+
+text-align:center;
+
+}
+
+
+
+footer a{
+
+color:#38bdf8;
+
+margin:10px;
+
+text-decoration:none;
+
+}
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:768px){
+
+
+header{
+
+width:95%;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+
+.stats{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+.search-box{
+
+flex-direction:column;
+
+}
+
+
+.search-box button{
+
+margin-top:10px;
+
+}
+
+
+}
+
+</style>
+
+
+
+
+
+<script>
+
+
+const button =
+document.querySelector(".search-box button");
+
+
+button.addEventListener("click",()=>{
+
+
+let text =
+document.querySelector(".search-box input").value;
+
+
+
+if(text.trim()==""){
+
+alert(
+"Напишите, какой отдых вы хотите 😊"
+);
+
+return;
+
+}
+
+
+
+button.innerHTML="🤖 AI ищет...";
+
+
+setTimeout(()=>{
+
+
+button.innerHTML="✨ Тур найден";
+
+
+alert(
+
+"AI рекомендует:\n\n🇹🇷 Турция\n⭐ 5★\n💰 от 299 000 ₸"
+
+);
+
+
+},1500);
+
+
+
+});
+
+
+
+</script>
+
+
 </body>
+
 </html>
+
+
+
