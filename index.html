@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alfa Travel</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+}
+
+header{
+    background:#0088cc;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    height:80vh;
+    background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero div{
+    background:rgba(0,0,0,.55);
+    padding:40px;
+    border-radius:10px;
+    color:white;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#ff9800;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+section{
+    padding:60px 10%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card div{
+    padding:20px;
+}
+
+.price{
+    color:#0088cc;
+    font-size:24px;
+    margin:10px 0;
+    font-weight:bold;
+}
+
+button{
+    background:#0088cc;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.about{
+    text-align:center;
+    line-height:1.7;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h2>Alfa Travel</h2>
+
+<ul>
+<li><a href="#tours">Туры</a></li>
+<li><a href="#about">О нас</a></li>
+<li><a href="#contacts">Контакты</a></li>
+</ul>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Забота о каждом клиенте</h1>
+
+<p>Альфа Тревел это твоя семья в путешествиях.</p>
+
+<a class="btn" href="#tours">Выбрать тур</a>
+
+</div>
+
+</section>
+
+<section id="tours">
+
+<h2>Популярные направления</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Турция</h3>
+
+<p>7 ночей, всё включено</p>
+
+<div class="price">от 299 000 ₸</div>
+
+<button>Забронировать</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Дубай</h3>
+
+<p>Роскошный отдых</p>
+
+<div class="price">от 350 000 ₸</div>
+
+<button>Забронировать</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=80">
+
+<div>
+
+<h3>Египет</h3>
+
+<p>Красное море</p>
+
+<div class="price">от 310 000 ₸</div>
+
+<button>Забронировать</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<h2>О компании</h2>
+
+<p>
+
+Alfa Travel помогает жителям Казахстана путешествовать по всему миру без забот.
+
+Мы подбираем лучшие ЦЕНЫ и сопровождаем КЛИЕНТОВ даже после возвращения.
+
+</p>
+
+</section>
+
+<section id="contacts">
+
+<h2>Контакты</h2>
+
+<p style="text-align:center;font-size:18px;">
+📍 Алматы<br><br>
+📞 +7 (707) 379-00-22<br><br>
+📧 info@Alfatravel.kz
+</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Alfa Travel. Все права защищены.</p>
+
+</footer>
+
+</body>
+</html>
