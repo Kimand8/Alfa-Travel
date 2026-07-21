@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ALFA Ai Travel</title>
+<title>Alfa Ai Travel</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 
 <style>
@@ -29,7 +29,7 @@ overflow:hidden;
 }
 
 
-/* Главный экран */
+/* ГЛАВНЫЙ ЭКРАН */
 
 .main{
 
@@ -38,8 +38,8 @@ height:100vh;
 background:
 
 linear-gradient(
-rgba(0,60,90,.25),
-rgba(0,20,40,.65)
+rgba(0,55,80,.25),
+rgba(0,25,45,.65)
 ),
 
 url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80");
@@ -52,9 +52,9 @@ background-position:center;
 
 display:flex;
 
-justify-content:center;
-
 align-items:center;
+
+justify-content:center;
 
 text-align:center;
 
@@ -66,7 +66,7 @@ color:white;
 
 
 
-/* Логотип */
+/* ЛОГО */
 
 .logo{
 
@@ -86,7 +86,7 @@ letter-spacing:.5px;
 
 
 
-/* Центральный блок */
+/* ЦЕНТР */
 
 .content{
 
@@ -100,9 +100,9 @@ max-width:430px;
 
 h1{
 
-font-size:36px;
+font-size:38px;
 
-line-height:1.25;
+line-height:1.2;
 
 margin-bottom:20px;
 
@@ -116,61 +116,25 @@ font-weight:800;
 
 font-size:19px;
 
-line-height:1.6;
-
-margin-bottom:30px;
+line-height:1.55;
 
 color:white;
 
-}
+margin-bottom:30px;
 
-
-
-/* Поле AI */
-
-.ai-input{
-
-width:100%;
-
-height:120px;
-
-border-radius:25px;
-
-border:none;
-
-padding:20px;
-
-font-size:16px;
-
-resize:none;
-
-outline:none;
-
-box-shadow:
-
-0 15px 40px rgba(0,0,0,.25);
-
-margin-bottom:18px;
+font-weight:600;
 
 }
 
 
 
-.ai-input::placeholder{
-
-color:#64748b;
-
-}
-
-
-
-/* Кнопка AI */
+/* AI КНОПКА */
 
 .ai-button{
 
 width:100%;
 
-padding:17px;
+padding:18px;
 
 border:none;
 
@@ -188,13 +152,39 @@ cursor:pointer;
 
 box-shadow:
 
-0 10px 30px rgba(0,0,0,.25);
+0 10px 30px rgba(0,0,0,.3);
 
 }
 
 
 
-/* Нижнее меню */
+/* ОБЩИЕ КНОПКИ */
+
+.action{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:30px;
+
+background:#0284c7;
+
+color:white;
+
+font-weight:700;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+
+
+/* НИЖНЕЕ МЕНЮ */
 
 
 .bottom-menu{
@@ -271,7 +261,8 @@ margin-bottom:3px;
 }
 
 
-/* Окна */
+
+/* ОКНА */
 
 .window{
 
@@ -289,9 +280,14 @@ left:50%;
 transform:translate(-50%,-50%);
 
 
-width:90%;
+width:92%;
 
-max-width:400px;
+max-width:420px;
+
+
+max-height:85vh;
+
+overflow:auto;
 
 
 background:white;
@@ -321,6 +317,14 @@ margin-bottom:20px;
 
 
 
+.window p{
+
+margin-bottom:15px;
+
+}
+
+
+
 input{
 
 width:100%;
@@ -338,22 +342,47 @@ font-size:15px;
 }
 
 
+/* КНОПКИ ВЫБОРА */
 
-.action{
+.choices{
 
-width:100%;
+display:flex;
 
-padding:15px;
+flex-wrap:wrap;
 
-border:none;
+gap:8px;
+
+margin-bottom:20px;
+
+}
+
+
+.choices button{
+
+border:1px solid #bae6fd;
+
+background:#f0f9ff;
+
+color:#0369a1;
+
+padding:10px 14px;
 
 border-radius:30px;
+
+font-size:14px;
+
+cursor:pointer;
+
+}
+
+
+.choices button.active{
 
 background:#0284c7;
 
 color:white;
 
-font-weight:700;
+border-color:#0284c7;
 
 }
 
@@ -406,7 +435,7 @@ margin-bottom:12px;
 
 <div class="logo">
 
-ALFA Ai Travel
+Alfa Ai Travel
 
 </div>
 
@@ -417,30 +446,24 @@ ALFA Ai Travel
 
 <h1>
 
-ALFA Ai Travel
+Alfa Ai Travel
 
 </h1>
 
 
+
 <div class="subtitle">
 
-Подберет для вас идеальный тур
+подберет для вас идеальный тур
 с помощью искусственного интеллекта
 
 </div>
 
 
 
-<textarea 
-class="ai-input"
-placeholder="Например: Вьетнам на двоих в Октябре до 500 000 тг">
-</textarea>
-
-
-
 <button class="ai-button" onclick="openAI()">
 
-Подбираю AI ✨
+🤖 НАЧАТЬ AI
 
 </button>
 
@@ -451,8 +474,6 @@ placeholder="Например: Вьетнам на двоих в Октябре 
 </div>
 
 
-
-<!-- Нижнее меню -->
 
 <nav class="bottom-menu">
 
@@ -466,6 +487,7 @@ placeholder="Например: Вьетнам на двоих в Октябре 
 </a>
 
 
+
 <a href="#" onclick="openContact()">
 
 <span>☎️</span>
@@ -473,6 +495,7 @@ placeholder="Например: Вьетнам на двоих в Октябре 
 Контакты
 
 </a>
+
 
 
 <a href="#" onclick="openLogin()">
@@ -484,34 +507,48 @@ placeholder="Например: Вьетнам на двоих в Октябре 
 </a>
 
 
+
 </nav>
-<!-- AI ОКНО -->
+<!-- AI ПОДБОР -->
 
 <div class="window" id="aiWindow">
+
 
 <h2>
 🤖 AI подбор тура
 </h2>
 
 
-<p style="margin-bottom:15px">
-
-Ваш запрос отправлен искусственному интеллекту.
-
+<p>
+Кто путешествует?
 </p>
 
 
-<p id="aiResult">
-
-Анализируем пожелания...
-
-</p>
+<div class="choices" id="people">
 
 
-<button class="action" onclick="closeWindows()">
+<button onclick="selectOption(this)">
+👤 1 взрослый
+</button>
 
-Закрыть
 
+<button onclick="selectOption(this)">
+👥 2 взрослых
+</button>
+
+
+<button onclick="selectOption(this)">
+👨‍👩‍👧 2 взрослых + ребенок
+</button>
+
+
+<button onclick="selectOption(this)">
+👨‍👩‍👦 Семья
+</button>
+
+
+<button onclick="selectOption(this)">
+🧑‍🤝‍🧑 Компания
 </button>
 
 
@@ -520,6 +557,109 @@ placeholder="Например: Вьетнам на двоих в Октябре 
 
 
 
+<p>
+Месяц поездки
+</p>
+
+
+<div class="choices" id="months">
+
+</div>
+
+
+
+
+
+<p>
+Направление
+</p>
+
+
+<div class="choices" id="country">
+
+
+<button onclick="selectOption(this)">
+🇻🇳 Вьетнам
+</button>
+
+
+<button onclick="selectOption(this)">
+🇹🇷 Турция
+</button>
+
+
+<button onclick="selectOption(this)">
+🇪🇬 Египет
+</button>
+
+
+<button onclick="selectOption(this)">
+🇹🇭 Таиланд
+</button>
+
+
+<button onclick="selectOption(this)">
+🇦🇪 ОАЭ
+</button>
+
+
+<button onclick="selectOption(this)">
+🌴 Мальдивы
+</button>
+
+
+</div>
+
+
+
+
+
+<p>
+Бюджет
+</p>
+
+
+<div class="choices" id="budget">
+
+
+<button onclick="selectOption(this)">
+💵 $
+</button>
+
+
+<button onclick="selectOption(this)">
+💵💵 $$
+</button>
+
+
+<button onclick="selectOption(this)">
+💵💵💵 $$$
+</button>
+
+
+</div>
+
+
+
+
+
+<button class="action" onclick="aiSearch()">
+
+🤖 Подбираю AI
+
+</button>
+
+
+
+<button class="action close" onclick="closeWindows()">
+
+Закрыть
+
+</button>
+
+
+
+</div>
 <!-- КОНТАКТЫ -->
 
 <div class="window" id="contactWindow">
@@ -530,8 +670,7 @@ placeholder="Например: Вьетнам на двоих в Октябре 
 </h2>
 
 
-<a class="contact-link"
-href="tel:+77073790022">
+<a class="contact-link" href="tel:+77073790022">
 
 📞 Позвонить
 
@@ -543,8 +682,8 @@ href="tel:+77073790022">
 
 
 
-<a class="contact-link"
-href="https://t.me/kimand8"
+<a class="contact-link" 
+href="https://t.me/kimand8" 
 target="_blank">
 
 💬 Telegram
@@ -581,13 +720,13 @@ target="_blank">
 </h2>
 
 
+
 <input 
-id="loginNick"
 placeholder="Ник">
 
 
+
 <input 
-id="loginPassword"
 type="password"
 placeholder="Пароль">
 
@@ -601,33 +740,35 @@ placeholder="Пароль">
 
 
 
-<hr style="margin:25px 0">
+<hr style="margin:25px 0;">
+
 
 
 <h3>
-
 Регистрация
-
 </h3>
 
 
+<br>
+
+
 <input 
-id="regName"
+id="name"
 placeholder="ФИО">
 
 
 <input 
-id="regPhone"
+id="phone"
 placeholder="Телефон">
 
 
 <input 
-id="regEmail"
+id="email"
 placeholder="Почта">
 
 
-<button class="action"
-onclick="sendTelegram()">
+
+<button class="action" onclick="sendTelegram()">
 
 Зарегистрироваться
 
@@ -635,8 +776,7 @@ onclick="sendTelegram()">
 
 
 
-<button class="action close"
-onclick="closeWindows()">
+<button class="action close" onclick="closeWindows()">
 
 Закрыть
 
@@ -653,7 +793,65 @@ onclick="closeWindows()">
 <script>
 
 
-/* Главная */
+// открыть AI
+
+function openAI(){
+
+document
+.getElementById("aiWindow")
+.style.display="block";
+
+}
+
+
+
+
+
+// открыть контакты
+
+function openContact(){
+
+document
+.getElementById("contactWindow")
+.style.display="block";
+
+}
+
+
+
+
+// открыть вход
+
+function openLogin(){
+
+document
+.getElementById("loginWindow")
+.style.display="block";
+
+}
+
+
+
+
+
+// закрытие окон
+
+function closeWindows(){
+
+document
+.querySelectorAll(".window")
+.forEach(
+
+item=>item.style.display="none"
+
+);
+
+}
+
+
+
+
+// главная
 
 function goHome(){
 
@@ -673,32 +871,26 @@ behavior:"smooth"
 
 
 
-/* AI */
 
-function openAI(){
+// выбор кнопок
 
-
-document
-.getElementById("aiWindow")
-.style.display="block";
+function selectOption(button){
 
 
-
-setTimeout(()=>{
-
-
-document
-.getElementById("aiResult")
-.innerHTML=
-
-"✨ Предварительный подбор готов:<br><br>"+
-"🌊 Вьетнам<br>"+
-"🏨 Комфортный отель<br>"+
-"📅 Октябрь<br>"+
-"💰 До 500 000 тг";
+let parent=button.parentElement;
 
 
-},1500);
+parent
+.querySelectorAll("button")
+.forEach(btn=>{
+
+btn.classList.remove("active");
+
+});
+
+
+
+button.classList.add("active");
 
 
 }
@@ -707,53 +899,135 @@ document
 
 
 
+// автоматические месяцы
 
-/* Контакты */
+const months=[
+
+"Январь",
+"Февраль",
+"Март",
+"Апрель",
+"Май",
+"Июнь",
+"Июль",
+"Август",
+"Сентябрь",
+"Октябрь",
+"Ноябрь",
+"Декабрь"
+
+];
 
 
-function openContact(){
 
-document
-.getElementById("contactWindow")
-.style.display="block";
+function createMonths(){
+
+
+let box=document
+.getElementById("months");
+
+
+let date=new Date();
+
+
+let current=date.getMonth();
+
+
+
+for(let i=0;i<3;i++){
+
+
+let btn=document.createElement("button");
+
+
+btn.innerHTML=
+months[(current+i)%12];
+
+
+
+btn.onclick=function(){
+
+selectOption(this);
+
+};
+
+
+
+box.appendChild(btn);
+
 
 }
 
 
 
-
-
-
-
-/* Вход */
-
-
-function openLogin(){
-
-document
-.getElementById("loginWindow")
-.style.display="block";
-
 }
 
 
+createMonths();
 
 
 
 
-/* Закрытие окон */
 
 
-function closeWindows(){
 
+// AI подбор
+
+
+function aiSearch(){
+
+
+let people=
 document
-.querySelectorAll(".window")
-.forEach(
+.querySelector("#people .active")?.innerText
+||
+"Не выбрано";
 
-item=>item.style.display="none"
+
+
+let month=
+document
+.querySelector("#months .active")?.innerText
+||
+"Не выбран";
+
+
+
+let country=
+document
+.querySelector("#country .active")?.innerText
+||
+"Не выбрано";
+
+
+
+let budget=
+document
+.querySelector("#budget .active")?.innerText
+||
+"Не выбран";
+
+
+
+
+
+alert(
+
+"🤖 Alfa Ai Travel анализирует:\n\n"+
+
+people+"\n"+
+
+month+"\n"+
+
+country+"\n"+
+
+"Бюджет: "+budget+
+
+"\n\nПодбираем лучшие варианты тура..."
 
 );
 
+
 }
 
 
@@ -761,29 +1035,29 @@ item=>item.style.display="none"
 
 
 
-
-/* Отправка регистрации в Telegram */
-
+// отправка регистрации в Telegram
 
 function sendTelegram(){
 
 
+
 let name=
-document.getElementById("regName").value;
+document.getElementById("name").value;
 
 
 let phone=
-document.getElementById("regPhone").value;
+document.getElementById("phone").value;
 
 
 let email=
-document.getElementById("regEmail").value;
+document.getElementById("email").value;
+
 
 
 
 let text=
 
-"ALFA Ai Travel - новая регистрация%0A%0A"+
+"Alfa Ai Travel - новая регистрация%0A%0A"+
 
 "ФИО: "+name+"%0A"+
 
@@ -802,15 +1076,16 @@ window.open(
 );
 
 
+
 }
+
 
 
 </script>
 
 
+
 </body>
 
 </html>
-
-
 
