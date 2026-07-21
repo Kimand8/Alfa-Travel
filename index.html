@@ -4,21 +4,27 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Alfa Ai Travel</title>
+
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 
 <style>
 
+
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Inter,Arial,sans-serif;
+
 }
+
 
 
 body{
@@ -29,20 +35,26 @@ overflow:hidden;
 }
 
 
-/* ГЛАВНЫЙ ЭКРАН */
+
+
 
 .main{
 
+
 height:100vh;
+
 
 background:
 
+
 linear-gradient(
-rgba(0,55,80,.25),
+rgba(0,60,90,.25),
 rgba(0,25,45,.65)
 ),
 
+
 url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80");
+
 
 
 background-size:cover;
@@ -50,173 +62,180 @@ background-size:cover;
 background-position:center;
 
 
-display:flex;
 
-align-items:center;
+display:flex;
 
 justify-content:center;
 
+align-items:center;
+
 text-align:center;
+
+
 
 padding:25px;
 
 color:white;
 
+
 }
 
 
 
-/* ЛОГО */
 
 .logo{
+
 
 position:absolute;
 
 top:35px;
 
+
 font-size:32px;
+
 
 font-weight:800;
 
+
 color:#7dd3fc;
 
-letter-spacing:.5px;
 
 }
 
 
 
-/* ЦЕНТР */
 
 .content{
 
+
 width:100%;
 
-max-width:430px;
+max-width:420px;
+
 
 }
+
+
 
 
 
 h1{
 
-font-size:38px;
 
-line-height:1.2;
-
-margin-bottom:20px;
+font-size:36px;
 
 font-weight:800;
 
+margin-bottom:20px;
+
+
 }
+
+
 
 
 
 .subtitle{
 
+
 font-size:19px;
 
-line-height:1.55;
-
-color:white;
-
-margin-bottom:30px;
+line-height:1.5;
 
 font-weight:600;
 
+margin-bottom:30px;
+
+
 }
 
 
 
-/* AI КНОПКА */
+
 
 .ai-button{
 
+
 width:100%;
 
-padding:18px;
+
+padding:17px;
+
 
 border:none;
+
 
 border-radius:40px;
 
+
 background:#38bdf8;
 
+
 color:white;
+
 
 font-size:18px;
 
+
 font-weight:700;
+
 
 cursor:pointer;
 
-box-shadow:
-
-0 10px 30px rgba(0,0,0,.3);
 
 }
 
 
 
-/* ОБЩИЕ КНОПКИ */
-
-.action{
-
-width:100%;
-
-padding:15px;
-
-border:none;
-
-border-radius:30px;
-
-background:#0284c7;
-
-color:white;
-
-font-weight:700;
-
-font-size:16px;
-
-cursor:pointer;
-
-}
 
 
-
-/* НИЖНЕЕ МЕНЮ */
+/* Нижнее меню */
 
 
 .bottom-menu{
 
+
 position:fixed;
+
 
 bottom:15px;
 
+
 left:50%;
+
 
 transform:translateX(-50%);
 
 
+
 width:90%;
+
 
 max-width:430px;
 
 
+
 background:rgba(255,255,255,.92);
 
+
+
 backdrop-filter:blur(20px);
+
 
 
 border-radius:25px;
 
 
+
 display:flex;
+
 
 justify-content:space-around;
 
 
+
 padding:12px;
+
 
 
 box-shadow:
@@ -224,94 +243,145 @@ box-shadow:
 0 15px 40px rgba(0,0,0,.25);
 
 
-z-index:20;
+
+z-index:100;
+
+
 
 }
+
 
 
 
 .bottom-menu a{
 
+
 text-decoration:none;
 
-color:#334155;
+
+color:#475569;
 
 
 display:flex;
 
+
 flex-direction:column;
+
 
 align-items:center;
 
 
+
 font-size:12px;
+
 
 font-weight:600;
 
+
 }
+
+
 
 
 
 .bottom-menu span{
 
-font-size:25px;
+
+font-size:24px;
+
+
+color:#94a3b8;
+
 
 margin-bottom:3px;
+
 
 }
 
 
 
-/* ОКНА */
+
+
+
+.bottom-menu a:hover span{
+
+
+color:#38bdf8;
+
+
+}
+
+
+
+
+
+/* Окна */
+
 
 .window{
 
+
 display:none;
 
+
 position:fixed;
+
 
 z-index:50;
 
 
-top:50%;
+
+top:38%;
+
 
 left:50%;
+
+
 
 transform:translate(-50%,-50%);
 
 
-width:92%;
 
-max-width:420px;
+width:86%;
 
 
-max-height:85vh;
+max-width:380px;
 
-overflow:auto;
 
 
 background:white;
 
+
 color:#0f172a;
 
 
-padding:25px;
+
+padding:18px;
 
 
-border-radius:25px;
+border-radius:22px;
+
 
 
 box-shadow:
 
 0 20px 60px rgba(0,0,0,.35);
 
+
+
 }
+
+
 
 
 
 .window h2{
 
-margin-bottom:20px;
+
+font-size:22px;
+
+margin-bottom:15px;
+
 
 }
 
@@ -319,30 +389,71 @@ margin-bottom:20px;
 
 .window p{
 
-margin-bottom:15px;
+
+font-size:14px;
+
+margin-bottom:12px;
+
 
 }
+
 
 
 
 input{
 
+
 width:100%;
 
-padding:14px;
+
+padding:11px;
+
 
 border-radius:15px;
 
+
 border:1px solid #cbd5e1;
 
-margin-bottom:12px;
 
-font-size:15px;
+margin-bottom:8px;
+
 
 }
 
 
-/* КНОПКИ ВЫБОРА */
+
+
+
+.action{
+
+
+width:100%;
+
+
+padding:14px;
+
+
+border:none;
+
+
+border-radius:30px;
+
+
+background:#0284c7;
+
+
+color:white;
+
+
+font-weight:700;
+
+
+}
+
+
+
+
+
 
 .choices{
 
@@ -350,73 +461,299 @@ display:flex;
 
 flex-wrap:wrap;
 
-gap:8px;
+gap:7px;
 
-margin-bottom:20px;
+margin-bottom:15px;
 
 }
+
 
 
 .choices button{
 
+
 border:1px solid #bae6fd;
+
 
 background:#f0f9ff;
 
+
 color:#0369a1;
 
-padding:10px 14px;
 
-border-radius:30px;
+padding:9px 12px;
 
-font-size:14px;
+
+border-radius:25px;
+
+
+font-size:13px;
+
 
 cursor:pointer;
 
+
 }
+
+
 
 
 .choices button.active{
 
+
 background:#0284c7;
+
 
 color:white;
 
-border-color:#0284c7;
 
 }
 
 
 
-.close{
 
-margin-top:12px;
-
-background:#e2e8f0;
-
-color:#0f172a;
-
-}
+.close-btn{
 
 
+width:100%;
 
-.contact-link{
 
-display:block;
+padding:13px;
 
-text-align:center;
 
-padding:15px;
+border:none;
+
 
 border-radius:30px;
 
-background:#0284c7;
 
-color:white;
+background:#e2e8f0;
+
+
+color:#334155;
+
+
+font-weight:600;
+
+
+margin-top:12px;
+
+
+}
+
+
+
+
+
+/* контакты */
+
+
+.small-text{
+
+
+font-size:14px;
+
+color:#64748b;
+
+margin-bottom:18px;
+
+
+}
+
+
+
+
+.call-btn,
+.telegram-btn{
+
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+
+padding:15px;
+
+
+border-radius:20px;
+
 
 text-decoration:none;
 
+
+color:white;
+
+
 margin-bottom:12px;
+
+
+}
+
+
+
+
+.call-btn{
+
+
+background:#16a34a;
+
+
+}
+
+
+
+
+.telegram-btn{
+
+
+background:#229ED9;
+
+
+}
+
+
+
+
+
+/* вход */
+
+
+.tabs{
+
+
+display:flex;
+
+
+background:#f1f5f9;
+
+
+border-radius:20px;
+
+
+padding:4px;
+
+
+margin-bottom:18px;
+
+
+}
+
+
+
+
+
+.tabs button{
+
+
+flex:1;
+
+
+border:none;
+
+
+background:transparent;
+
+
+padding:10px;
+
+
+border-radius:18px;
+
+
+color:#64748b;
+
+
+}
+
+
+
+
+.tabs button.active{
+
+
+background:white;
+
+
+color:#0284c7;
+
+
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+
+
+}
+
+
+
+.login-btn{
+
+
+width:100%;
+
+
+padding:14px;
+
+
+border:none;
+
+
+border-radius:30px;
+
+
+background:#0284c7;
+
+
+color:white;
+
+
+font-weight:700;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+
+.register{
+
+
+border-top:1px solid #e2e8f0;
+
+
+padding-top:15px;
+
+
+}
+
+
+
+.register-btn{
+
+
+width:100%;
+
+
+padding:14px;
+
+
+border:none;
+
+
+border-radius:30px;
+
+
+background:#38bdf8;
+
+
+color:white;
+
+
+font-weight:700;
+
 
 }
 
@@ -430,6 +767,8 @@ margin-bottom:12px;
 <body>
 
 
+
+
 <div class="main">
 
 
@@ -438,6 +777,7 @@ margin-bottom:12px;
 Alfa Ai Travel
 
 </div>
+
 
 
 
@@ -454,33 +794,44 @@ Alfa Ai Travel
 
 <div class="subtitle">
 
+
 подберет для вас идеальный тур
 с помощью искусственного интеллекта
 
+
 </div>
+
 
 
 
 <button class="ai-button" onclick="openAI()">
 
-🤖 НАЧАТЬ AI
+🤖 Начать с AI
 
 </button>
 
 
-</div>
-
 
 </div>
 
+
+</div>
+
+
+
+
+
+
+<!-- НИЖНЕЕ МЕНЮ -->
 
 
 <nav class="bottom-menu">
 
 
+
 <a href="#" onclick="goHome()">
 
-<span>🏠</span>
+<span>⌂</span>
 
 Главная
 
@@ -488,9 +839,10 @@ Alfa Ai Travel
 
 
 
+
 <a href="#" onclick="openContact()">
 
-<span>☎️</span>
+<span>♧</span>
 
 Контакты
 
@@ -498,9 +850,10 @@ Alfa Ai Travel
 
 
 
+
 <a href="#" onclick="openLogin()">
 
-<span>👤</span>
+<span>◯</span>
 
 Вход
 
@@ -509,14 +862,25 @@ Alfa Ai Travel
 
 
 </nav>
-<!-- AI ПОДБОР -->
+
+
+
+
+
+
+
+<!-- AI ОКНО -->
+
 
 <div class="window" id="aiWindow">
 
 
 <h2>
+
 🤖 AI подбор тура
+
 </h2>
+
 
 
 <p>
@@ -524,32 +888,49 @@ Alfa Ai Travel
 </p>
 
 
+
+
 <div class="choices" id="people">
 
 
 <button onclick="selectOption(this)">
+
 👤 1 взрослый
+
 </button>
 
 
+
 <button onclick="selectOption(this)">
+
 👥 2 взрослых
+
 </button>
 
 
+
 <button onclick="selectOption(this)">
+
 👨‍👩‍👧 2 взрослых + ребенок
+
 </button>
 
 
+
 <button onclick="selectOption(this)">
+
 👨‍👩‍👦 Семья
+
 </button>
+
 
 
 <button onclick="selectOption(this)">
+
 🧑‍🤝‍🧑 Компания
+
 </button>
+
 
 
 </div>
@@ -557,9 +938,13 @@ Alfa Ai Travel
 
 
 
+
 <p>
-Месяц поездки
+
+Когда?
+
 </p>
+
 
 
 <div class="choices" id="months">
@@ -571,73 +956,109 @@ Alfa Ai Travel
 
 
 <p>
+
 Направление
+
 </p>
+
 
 
 <div class="choices" id="country">
 
 
+
 <button onclick="selectOption(this)">
+
 🇻🇳 Вьетнам
+
 </button>
 
 
+
 <button onclick="selectOption(this)">
+
 🇹🇷 Турция
+
 </button>
 
 
+
 <button onclick="selectOption(this)">
+
 🇪🇬 Египет
+
 </button>
 
 
+
 <button onclick="selectOption(this)">
+
 🇹🇭 Таиланд
+
 </button>
 
 
+
 <button onclick="selectOption(this)">
+
 🇦🇪 ОАЭ
+
 </button>
+
 
 
 <button onclick="selectOption(this)">
+
 🌴 Мальдивы
+
 </button>
+
 
 
 </div>
+
 
 
 
 
 
 <p>
+
 Бюджет
+
 </p>
+
 
 
 <div class="choices" id="budget">
 
 
 <button onclick="selectOption(this)">
+
 💵 $
+
 </button>
 
 
+
 <button onclick="selectOption(this)">
+
 💵💵 $$
+
 </button>
+
 
 
 <button onclick="selectOption(this)">
+
 💵💵💵 $$$
+
 </button>
+
 
 
 </div>
+
 
 
 
@@ -645,13 +1066,14 @@ Alfa Ai Travel
 
 <button class="action" onclick="aiSearch()">
 
-🤖 Подбираю AI
+🤖 Подбираю с AI
 
 </button>
 
 
 
-<button class="action close" onclick="closeWindows()">
+
+<button class="close-btn" onclick="closeWindows()">
 
 Закрыть
 
@@ -660,43 +1082,86 @@ Alfa Ai Travel
 
 
 </div>
-<!-- КОНТАКТЫ -->
+<!-- ОКНО КОНТАКТОВ -->
 
 <div class="window" id="contactWindow">
 
 
 <h2>
-☎️ Контакты
+Связаться с Alfa Ai Travel
 </h2>
 
 
-<a class="contact-link" href="tel:+77073790022">
 
-📞 Позвонить
+<p class="small-text">
+
+Наш менеджер поможет подобрать лучший тур
+
+</p>
+
+
+
+<a class="call-btn" href="tel:+77073790022">
+
+
+<div style="font-size:28px">
+
+☎
+
+</div>
+
+
+<div>
+
+<strong>
+Позвонить
+</strong>
 
 <br>
 
 +7 707 379 00 22
 
+</div>
+
+
 </a>
 
 
 
-<a class="contact-link" 
-href="https://t.me/kimand8" 
+
+
+<a class="telegram-btn"
+href="https://t.me/kimand8"
 target="_blank">
 
-💬 Telegram
+
+<div style="font-size:28px">
+
+✈
+
+</div>
+
+
+<div>
+
+<strong>
+Telegram
+</strong>
 
 <br>
 
 @kimand8
 
+</div>
+
+
 </a>
 
 
 
-<button class="action close" onclick="closeWindows()">
+
+
+<button class="close-btn" onclick="closeWindows()">
 
 Закрыть
 
@@ -710,14 +1175,44 @@ target="_blank">
 
 
 
-<!-- ВХОД -->
+
+<!-- ОКНО ВХОДА -->
+
 
 <div class="window" id="loginWindow">
 
 
 <h2>
-👤 Вход
+
+Личный кабинет
+
 </h2>
+
+
+
+
+<div class="tabs">
+
+
+<button class="active">
+
+Вход
+
+</button>
+
+
+
+<button>
+
+Регистрация
+
+</button>
+
+
+
+</div>
+
+
 
 
 
@@ -732,7 +1227,9 @@ placeholder="Пароль">
 
 
 
-<button class="action">
+
+
+<button class="login-btn">
 
 Войти
 
@@ -740,16 +1237,20 @@ placeholder="Пароль">
 
 
 
-<hr style="margin:25px 0;">
 
+
+<div class="register">
 
 
 <h3>
-Регистрация
+
+Создать аккаунт
+
 </h3>
 
 
 <br>
+
 
 
 <input 
@@ -757,9 +1258,11 @@ id="name"
 placeholder="ФИО">
 
 
+
 <input 
 id="phone"
 placeholder="Телефон">
+
 
 
 <input 
@@ -768,17 +1271,12 @@ placeholder="Почта">
 
 
 
-<button class="action" onclick="sendTelegram()">
-
-Зарегистрироваться
-
-</button>
 
 
+<button class="register-btn"
+onclick="sendTelegram()">
 
-<button class="action close" onclick="closeWindows()">
-
-Закрыть
+Регистрация
 
 </button>
 
@@ -790,72 +1288,114 @@ placeholder="Почта">
 
 
 
+<button class="close-btn" onclick="closeWindows()">
+
+Закрыть
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
 <script>
 
 
-// открыть AI
+
+
+
+// Открытие AI
 
 function openAI(){
+
 
 document
 .getElementById("aiWindow")
 .style.display="block";
 
+
 }
 
 
 
 
 
-// открыть контакты
+
+// Контакты
 
 function openContact(){
+
 
 document
 .getElementById("contactWindow")
 .style.display="block";
 
+
 }
 
 
 
 
-// открыть вход
+
+
+// Вход
 
 function openLogin(){
+
 
 document
 .getElementById("loginWindow")
 .style.display="block";
 
+
 }
 
 
 
 
 
-// закрытие окон
+
+
+// Закрытие окон
+
 
 function closeWindows(){
 
+
 document
 .querySelectorAll(".window")
-.forEach(
+.forEach(function(item){
 
-item=>item.style.display="none"
 
-);
+item.style.display="none";
+
+
+});
+
 
 }
 
 
 
 
-// главная
+
+
+// Главная
+
 
 function goHome(){
 
+
 closeWindows();
+
 
 window.scrollTo({
 
@@ -865,6 +1405,7 @@ behavior:"smooth"
 
 });
 
+
 }
 
 
@@ -872,19 +1413,25 @@ behavior:"smooth"
 
 
 
-// выбор кнопок
+
+// Выбор кнопок
+
 
 function selectOption(button){
+
 
 
 let parent=button.parentElement;
 
 
+
 parent
 .querySelectorAll("button")
-.forEach(btn=>{
+.forEach(function(btn){
+
 
 btn.classList.remove("active");
+
 
 });
 
@@ -899,9 +1446,13 @@ button.classList.add("active");
 
 
 
-// автоматические месяцы
 
-const months=[
+
+// Автоматические месяцы
+
+
+const monthNames=[
+
 
 "Январь",
 "Февраль",
@@ -916,51 +1467,62 @@ const months=[
 "Ноябрь",
 "Декабрь"
 
+
 ];
+
 
 
 
 function createMonths(){
 
 
+
 let box=document
 .getElementById("months");
 
 
+
 let date=new Date();
+
 
 
 let current=date.getMonth();
 
 
 
+
 for(let i=0;i<3;i++){
 
 
-let btn=document.createElement("button");
 
-
-btn.innerHTML=
-months[(current+i)%12];
+let button=document.createElement("button");
 
 
 
-btn.onclick=function(){
+button.innerHTML=
+monthNames[(current+i)%12];
+
+
+
+button.onclick=function(){
+
 
 selectOption(this);
+
 
 };
 
 
 
-box.appendChild(btn);
-
-
-}
+box.appendChild(button);
 
 
 
 }
+
+
+}
+
 
 
 createMonths();
@@ -977,55 +1539,64 @@ createMonths();
 function aiSearch(){
 
 
+
 let people=
-document
-.querySelector("#people .active")?.innerText
-||
-"Не выбрано";
+document.querySelector("#people .active");
 
 
 
 let month=
-document
-.querySelector("#months .active")?.innerText
-||
-"Не выбран";
+document.querySelector("#months .active");
 
 
 
 let country=
-document
-.querySelector("#country .active")?.innerText
-||
-"Не выбрано";
+document.querySelector("#country .active");
 
 
 
 let budget=
-document
-.querySelector("#budget .active")?.innerText
-||
-"Не выбран";
+document.querySelector("#budget .active");
 
 
 
 
-
-alert(
+let text=
 
 "🤖 Alfa Ai Travel анализирует:\n\n"+
 
-people+"\n"+
 
-month+"\n"+
+"👥 "+
+(people ? people.innerText:"Не выбрано")
 
-country+"\n"+
++"\n"+
 
-"Бюджет: "+budget+
 
-"\n\nПодбираем лучшие варианты тура..."
+"📅 "+
+(month ? month.innerText:"Не выбрано")
 
-);
++"\n"+
+
+
+"🌍 "+
+(country ? country.innerText:"Не выбрано")
+
++"\n"+
+
+
+"💰 "+
+(budget ? budget.innerText:"Не выбрано")
+
++"\n\n"+
+
+
+"✨ Подбираем лучшие варианты тура";
+
+
+
+
+alert(text);
+
 
 
 }
@@ -1035,7 +1606,10 @@ country+"\n"+
 
 
 
-// отправка регистрации в Telegram
+
+
+// Отправка регистрации в Telegram
+
 
 function sendTelegram(){
 
@@ -1045,8 +1619,10 @@ let name=
 document.getElementById("name").value;
 
 
+
 let phone=
 document.getElementById("phone").value;
+
 
 
 let email=
@@ -1055,21 +1631,28 @@ document.getElementById("email").value;
 
 
 
-let text=
+
+let message=
+
 
 "Alfa Ai Travel - новая регистрация%0A%0A"+
 
+
 "ФИО: "+name+"%0A"+
 
+
 "Телефон: "+phone+"%0A"+
+
 
 "Почта: "+email;
 
 
 
+
+
 window.open(
 
-"https://t.me/kimand8?text="+text,
+"https://t.me/kimand8?text="+message,
 
 "_blank"
 
