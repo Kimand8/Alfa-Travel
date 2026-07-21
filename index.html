@@ -1,463 +1,393 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ALFA AI Travel — Умный подбор путешествий</title>
+<title>ALFA Ai Travel</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Inter,Arial,sans-serif;
-}
-
-
-html{
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,Arial,sans-serif;
 }
 
 
 body{
-    background:#f8fafc;
-    color:#0f172a;
-}
-
-
-/* HEADER */
-
-header{
-
-    position:fixed;
-    top:20px;
-    left:50%;
-    transform:translateX(-50%);
-
-    width:90%;
-    max-width:1200px;
-
-    background:rgba(255,255,255,.75);
-
-    backdrop-filter:blur(15px);
-
-    border-radius:20px;
-
-    padding:18px 30px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    z-index:100;
-
-    box-shadow:
-    0 10px 40px rgba(0,0,0,.08);
-
-}
-
-
-.logo{
-
-    font-size:26px;
-    font-weight:800;
-
-    color:#0284c7;
-
-}
-
-
-
-nav{
-
-    display:flex;
-    gap:25px;
-
-}
-
-
-nav a{
-
-    text-decoration:none;
-    color:#334155;
-
-    font-weight:500;
-
-}
-
-
-.login{
-
-    border:none;
-
-    background:#0284c7;
-
-    color:white;
-
-    padding:12px 24px;
-
-    border-radius:50px;
-
-    cursor:pointer;
-
-    font-weight:600;
-
-}
-
-
-
-/* HERO */
-
-
-.hero{
-
 
 height:100vh;
+overflow:hidden;
 
-min-height:700px;
+}
 
+
+/* Главный экран */
+
+.main{
+
+height:100vh;
 
 background:
 
 linear-gradient(
-rgba(15,23,42,.45),
-rgba(15,23,42,.75)
+rgba(0,60,90,.25),
+rgba(0,20,40,.65)
 ),
 
-url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80")
+url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80");
 
-center/cover;
+
+background-size:cover;
+
+background-position:center;
 
 
 display:flex;
 
-align-items:center;
-
 justify-content:center;
+
+align-items:center;
 
 text-align:center;
 
+padding:25px;
+
 color:white;
 
+}
+
+
+
+/* Логотип */
+
+.logo{
+
+position:absolute;
+
+top:35px;
+
+font-size:32px;
+
+font-weight:800;
+
+color:#7dd3fc;
+
+letter-spacing:.5px;
 
 }
 
 
-.hero-content{
 
-max-width:900px;
+/* Центральный блок */
 
-padding:20px;
+.content{
 
-}
+width:100%;
 
-
-.badge{
-
-display:inline-block;
-
-background:
-rgba(255,255,255,.15);
-
-backdrop-filter:blur(10px);
-
-padding:10px 20px;
-
-border-radius:50px;
-
-margin-bottom:30px;
+max-width:430px;
 
 }
 
 
-.hero h1{
 
-font-size:72px;
+h1{
 
-line-height:1.05;
+font-size:36px;
+
+line-height:1.25;
+
+margin-bottom:20px;
 
 font-weight:800;
 
 }
 
 
-.hero h1 span{
 
-color:#38bdf8;
+.subtitle{
 
-}
+font-size:19px;
 
+line-height:1.6;
 
-.hero p{
-
-font-size:22px;
-
-margin:30px auto;
-
-max-width:650px;
-
-color:#e2e8f0;
-
-}
-
-
-
-/* SEARCH */
-
-
-.search-box{
-
-background:white;
-
-padding:10px;
-
-border-radius:25px;
-
-display:flex;
-
-max-width:700px;
-
-margin:auto;
-
-box-shadow:
-0 20px 50px rgba(0,0,0,.25);
-
-}
-
-
-.search-box input{
-
-flex:1;
-
-border:none;
-
-outline:none;
-
-padding:18px;
-
-font-size:16px;
-
-color:#333;
-
-}
-
-
-
-.search-box button{
-
-border:none;
-
-background:
-
-linear-gradient(
-135deg,
-#0284c7,
-#2563eb
-);
+margin-bottom:30px;
 
 color:white;
 
-padding:18px 35px;
+}
 
-border-radius:18px;
+
+
+/* Поле AI */
+
+.ai-input{
+
+width:100%;
+
+height:120px;
+
+border-radius:25px;
+
+border:none;
+
+padding:20px;
 
 font-size:16px;
+
+resize:none;
+
+outline:none;
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.25);
+
+margin-bottom:18px;
+
+}
+
+
+
+.ai-input::placeholder{
+
+color:#64748b;
+
+}
+
+
+
+/* Кнопка AI */
+
+.ai-button{
+
+width:100%;
+
+padding:17px;
+
+border:none;
+
+border-radius:40px;
+
+background:#38bdf8;
+
+color:white;
+
+font-size:18px;
 
 font-weight:700;
 
 cursor:pointer;
 
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.25);
+
 }
 
 
 
-/* STATS */
+/* Нижнее меню */
 
 
-.stats{
+.bottom-menu{
+
+position:fixed;
+
+bottom:15px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+
+width:90%;
+
+max-width:430px;
+
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(20px);
+
+
+border-radius:25px;
+
 
 display:flex;
 
-justify-content:center;
-
-gap:50px;
-
-margin-top:50px;
-
-}
+justify-content:space-around;
 
 
-.stats div{
+padding:12px;
 
-background:
-rgba(255,255,255,.12);
-
-padding:20px 35px;
-
-border-radius:20px;
-
-backdrop-filter:blur(10px);
-
-}
-
-
-.stats h2{
-
-font-size:32px;
-
-}
-
-
-.stats span{
-
-color:#cbd5e1;
-
-}
-
-
-
-
-
-
-/* GENERAL */
-
-
-section{
-
-padding:100px 8%;
-
-}
-
-
-
-.title{
-
-text-align:center;
-
-margin-bottom:50px;
-
-}
-
-
-
-.title h2{
-
-font-size:42px;
-
-margin-bottom:15px;
-
-}
-
-
-
-.title p{
-
-color:#64748b;
-
-font-size:18px;
-
-}
-
-
-
-/* AI BLOCK */
-
-
-.ai-box{
-
-max-width:850px;
-
-margin:auto;
-
-background:white;
-
-border-radius:30px;
-
-padding:35px;
 
 box-shadow:
 
-0 20px 50px rgba(0,0,0,.08);
+0 15px 40px rgba(0,0,0,.25);
+
+
+z-index:20;
 
 }
 
 
 
-.message{
+.bottom-menu a{
 
-padding:18px;
+text-decoration:none;
 
-margin-bottom:15px;
+color:#334155;
 
-border-radius:20px;
-
-max-width:80%;
-
-}
-
-
-.ai{
-
-background:#f1f5f9;
-
-}
-
-
-.user{
-
-background:#0284c7;
-
-color:white;
-
-margin-left:auto;
-
-}
-
-
-.chat-input{
 
 display:flex;
 
-gap:10px;
+flex-direction:column;
 
-margin-top:25px;
+align-items:center;
+
+
+font-size:12px;
+
+font-weight:600;
 
 }
 
 
-.chat-input input{
 
-flex:1;
+.bottom-menu span{
 
-padding:15px;
+font-size:25px;
+
+margin-bottom:3px;
+
+}
+
+
+/* Окна */
+
+.window{
+
+display:none;
+
+position:fixed;
+
+z-index:50;
+
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+
+width:90%;
+
+max-width:400px;
+
+
+background:white;
+
+color:#0f172a;
+
+
+padding:25px;
+
+
+border-radius:25px;
+
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.35);
+
+}
+
+
+
+.window h2{
+
+margin-bottom:20px;
+
+}
+
+
+
+input{
+
+width:100%;
+
+padding:14px;
 
 border-radius:15px;
 
-border:1px solid #ddd;
+border:1px solid #cbd5e1;
+
+margin-bottom:12px;
+
+font-size:15px;
 
 }
 
 
-.chat-input button{
+
+.action{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:30px;
 
 background:#0284c7;
 
 color:white;
 
-border:none;
+font-weight:700;
 
-padding:15px 25px;
+}
 
-border-radius:15px;
+
+
+.close{
+
+margin-top:12px;
+
+background:#e2e8f0;
+
+color:#0f172a;
+
+}
+
+
+
+.contact-link{
+
+display:block;
+
+text-align:center;
+
+padding:15px;
+
+border-radius:30px;
+
+background:#0284c7;
+
+color:white;
+
+text-decoration:none;
+
+margin-bottom:12px;
 
 }
 
@@ -471,180 +401,47 @@ border-radius:15px;
 <body>
 
 
-<header>
+<div class="main">
+
 
 <div class="logo">
-🌍 ALFA AI Travel
+
+ALFA Ai Travel
+
 </div>
 
 
-<nav>
 
-<a href="#home">Главная</a>
-
-<a href="#ai">AI</a>
-
-<a href="#tours">Туры</a>
-
-<a href="#contact">Контакты</a>
-
-</nav>
-
-
-<button class="login">
-Войти
-</button>
-
-
-</header>
-
-
-
-
-<section class="hero" id="home">
-
-
-<div class="hero-content">
-
-
-<div class="badge">
-✨ AI Travel Assistant
-</div>
+<div class="content">
 
 
 <h1>
-Умный подбор
-<br>
-вашего путешествия!
-<span>AI помощник</span>
+
+ALFA Ai Travel
+
 </h1>
 
 
-<p>
-Расскажите о своих желаниях,
-а искусственный интеллект найдёт
-идеальный тур.
-</p>
+<div class="subtitle">
 
-
-<div class="search-box">
-
-<input placeholder="Например: Вьетнам на двоих в Октябре до 500 000 ₸">
-
-
-<button>
-Найти тур
-</button>
-
-
-</div>
-
-
-<div class="stats">
-
-<div>
-<h2>120+</h2>
-<span>стран</span>
-</div>
-
-
-<div>
-<h2>5000+</h2>
-<span>клиентов</span>
-</div>
-
-
-<div>
-<h2>24/7</h2>
-<span>AI помощь</span>
-</div>
-
-</div>
-
-
-</div>
-
-
-</section>
-
-<!-- TOURS -->
-
-<section id="tours">
-
-<div class="title">
-
-<h2>
-Популярные направления
-</h2>
-
-<p>
-AI выбирает лучшие варианты отдыха
-</p>
+Подберет для вас идеальный тур
+с помощью искусственного интеллекта
 
 </div>
 
 
 
-<div class="tour-grid">
-
-
-<div class="tour-card">
-
-<img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80">
-
-
-<div>
-
-<h3>
-🇹🇷 Турция
-</h3>
-
-<p>
-Море • All Inclusive • 5★
-</p>
-
-<b>
-от 299 000 ₸
-</b>
-
-
-<button>
-Подробнее
-</button>
-
-</div>
-
-
-</div>
+<textarea 
+class="ai-input"
+placeholder="Например: Вьетнам на двоих в Октябре до 500 000 тг">
+</textarea>
 
 
 
+<button class="ai-button" onclick="openAI()">
 
+Подбираю AI ✨
 
-<div class="tour-card">
-
-
-<img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=800&q=80">
-
-
-<div>
-
-<h3>
-🇪🇬 Египет
-</h3>
-
-<p>
-Красное море • Дайвинг
-</p>
-
-
-<b>
-от 315 000 ₸
-</b>
-
-
-<button>
-Подробнее
 </button>
 
 
@@ -655,513 +452,199 @@ AI выбирает лучшие варианты отдыха
 
 
 
+<!-- Нижнее меню -->
 
+<nav class="bottom-menu">
 
 
+<a href="#" onclick="goHome()">
 
-<div class="tour-card">
+<span>🏠</span>
 
+Главная
 
-<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80">
-
-
-<div>
-
-<h3>
-🇦🇪 Дубай
-</h3>
-
-<p>
-Luxury • Город будущего
-</p>
-
-
-<b>
-от 420 000 ₸
-</b>
-
-
-<button>
-Подробнее
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- FEATURES -->
-
-
-<section>
-
-
-<div class="title">
-
-<h2>
-Почему AI Travel?
-</h2>
-
-</div>
-
-
-
-<div class="features">
-
-
-<div>
-
-<h3>
-🤖 AI подбор
-</h3>
-
-<p>
-Анализируем бюджет,
-сезон и Ваши пожелания
-</p>
-
-</div>
-
-
-
-<div>
-
-<h3>
-🌎 Цены напрямую от крупнейших операторов
-</h3>
-
-<p>
-От пляжей до горных маршрутов
-</p>
-
-</div>
-
-
-
-<div>
-
-<h3>
-💎 Ai анализирует все ваши пожелания
-</h3>
-
-<p>
-Только подходящие предложения
-</p>
-
-</div>
-
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-<!-- REVIEWS -->
-
-
-<section>
-
-
-<div class="title">
-
-<h2>
-Отзывы
-</h2>
-
-</div>
-
-
-<div class="reviews">
-
-
-<div>
-
-⭐⭐⭐⭐⭐
-
-<p>
-"AI подобрал отличный тур.
-Подсказал лучшие отели для отдыха с детьми."
-
-</p>
-
-<strong>
-Айгерим, Алматы
-</strong>
-
-</div>
-
-
-
-<div>
-
-⭐⭐⭐⭐⭐
-
-<p>
-"Очень удобно.
-Учел мои пожелания чтобы все было в пешей доступности."
-
-</p>
-
-
-<strong>
-Данияр, Астана
-</strong>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<footer id="contact">
-
-
-<h2>
-🌍 ALFA AI Travel
-</h2>
-
-
-<p>
-Умные путешествия будущего
-</p>
-
-
-<div>
-
-<a href="#">
-Instagram
 </a>
 
 
-<a href="#">
-Telegram
+<a href="#" onclick="openContact()">
+
+<span>☎️</span>
+
+Контакты
+
 </a>
 
 
-<a href="#">
-WhatsApp
+<a href="#" onclick="openLogin()">
+
+<span>👤</span>
+
+Вход
+
 </a>
+
+
+</nav>
+<!-- AI ОКНО -->
+
+<div class="window" id="aiWindow">
+
+<h2>
+🤖 AI подбор тура
+</h2>
+
+
+<p style="margin-bottom:15px">
+
+Ваш запрос отправлен искусственному интеллекту.
+
+</p>
+
+
+<p id="aiResult">
+
+Анализируем пожелания...
+
+</p>
+
+
+<button class="action" onclick="closeWindows()">
+
+Закрыть
+
+</button>
 
 
 </div>
 
 
-<p>
-© 2026 ALFA AI Travel Kazakhstan
-</p>
 
 
-</footer>
+<!-- КОНТАКТЫ -->
 
+<div class="window" id="contactWindow">
 
 
+<h2>
+☎️ Контакты
+</h2>
 
 
-<style>
+<a class="contact-link"
+href="tel:+77073790022">
 
+📞 Позвонить
 
-/* TOURS */
+<br>
 
++7 707 379 00 22
 
-.tour-grid{
+</a>
 
-display:grid;
 
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
 
-gap:30px;
+<a class="contact-link"
+href="https://t.me/kimand8"
+target="_blank">
 
-max-width:1200px;
+💬 Telegram
 
-margin:auto;
+<br>
 
-}
+@kimand8
 
+</a>
 
 
-.tour-card{
 
-background:white;
+<button class="action close" onclick="closeWindows()">
 
-border-radius:30px;
+Закрыть
 
-overflow:hidden;
+</button>
 
-box-shadow:
 
-0 15px 40px rgba(0,0,0,.08);
+</div>
 
-transition:.4s;
 
-}
 
 
 
-.tour-card:hover{
 
-transform:translateY(-10px);
+<!-- ВХОД -->
 
-}
+<div class="window" id="loginWindow">
 
 
+<h2>
+👤 Вход
+</h2>
 
-.tour-card img{
 
-width:100%;
+<input 
+id="loginNick"
+placeholder="Ник">
 
-height:240px;
 
-object-fit:cover;
+<input 
+id="loginPassword"
+type="password"
+placeholder="Пароль">
 
-}
 
 
+<button class="action">
 
-.tour-card div{
+Войти
 
-padding:25px;
+</button>
 
-}
 
 
+<hr style="margin:25px 0">
 
-.tour-card h3{
 
-font-size:26px;
+<h3>
 
-margin-bottom:10px;
+Регистрация
 
-}
+</h3>
 
 
-.tour-card p{
+<input 
+id="regName"
+placeholder="ФИО">
 
-color:#64748b;
 
-margin-bottom:15px;
+<input 
+id="regPhone"
+placeholder="Телефон">
 
-}
 
+<input 
+id="regEmail"
+placeholder="Почта">
 
 
-.tour-card b{
+<button class="action"
+onclick="sendTelegram()">
 
-display:block;
+Зарегистрироваться
 
-font-size:24px;
+</button>
 
-color:#0284c7;
 
-margin-bottom:20px;
 
-}
+<button class="action close"
+onclick="closeWindows()">
 
+Закрыть
 
-.tour-card button{
+</button>
 
-border:0;
 
-background:#0284c7;
+</div>
 
-color:white;
-
-padding:12px 25px;
-
-border-radius:50px;
-
-cursor:pointer;
-
-}
-
-
-
-
-
-/* FEATURES */
-
-
-.features{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
-}
-
-
-
-.features div{
-
-background:white;
-
-padding:35px;
-
-border-radius:25px;
-
-box-shadow:
-
-0 10px 30px rgba(0,0,0,.06);
-
-text-align:center;
-
-}
-
-
-
-
-/* REVIEWS */
-
-
-.reviews{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
-
-gap:30px;
-
-}
-
-
-
-.reviews div{
-
-background:white;
-
-padding:35px;
-
-border-radius:25px;
-
-box-shadow:
-
-0 10px 30px rgba(0,0,0,.06);
-
-}
-
-
-
-.reviews p{
-
-margin:20px 0;
-
-color:#475569;
-
-}
-
-
-
-/* FOOTER */
-
-
-footer{
-
-background:#0f172a;
-
-color:white;
-
-padding:60px 20px;
-
-text-align:center;
-
-}
-
-
-
-footer a{
-
-color:#38bdf8;
-
-margin:10px;
-
-text-decoration:none;
-
-}
-
-
-
-
-/* MOBILE */
-
-
-@media(max-width:768px){
-
-
-header{
-
-width:95%;
-
-}
-
-
-nav{
-
-display:none;
-
-}
-
-
-.hero h1{
-
-font-size:42px;
-
-}
-
-
-.stats{
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-
-.search-box{
-
-flex-direction:column;
-
-}
-
-
-.search-box button{
-
-margin-top:10px;
-
-}
-
-
-}
-
-</style>
 
 
 
@@ -1170,52 +653,156 @@ margin-top:10px;
 <script>
 
 
-const button =
-document.querySelector(".search-box button");
+/* Главная */
 
+function goHome(){
 
-button.addEventListener("click",()=>{
+closeWindows();
 
+window.scrollTo({
 
-let text =
-document.querySelector(".search-box input").value;
+top:0,
 
+behavior:"smooth"
 
-
-if(text.trim()==""){
-
-alert(
-"Напишите, какой отдых вы хотите 😊"
-);
-
-return;
+});
 
 }
 
 
 
-button.innerHTML="🤖 AI ищет...";
+
+
+/* AI */
+
+function openAI(){
+
+
+document
+.getElementById("aiWindow")
+.style.display="block";
+
 
 
 setTimeout(()=>{
 
 
-button.innerHTML="✨ Тур найден";
+document
+.getElementById("aiResult")
+.innerHTML=
 
-
-alert(
-
-"AI рекомендует:\n\n🇹🇷 Турция\n⭐ 5★\n💰 от 299 000 ₸"
-
-);
+"✨ Предварительный подбор готов:<br><br>"+
+"🌊 Вьетнам<br>"+
+"🏨 Комфортный отель<br>"+
+"📅 Октябрь<br>"+
+"💰 До 500 000 тг";
 
 
 },1500);
 
 
+}
 
-});
 
+
+
+
+
+/* Контакты */
+
+
+function openContact(){
+
+document
+.getElementById("contactWindow")
+.style.display="block";
+
+}
+
+
+
+
+
+
+
+/* Вход */
+
+
+function openLogin(){
+
+document
+.getElementById("loginWindow")
+.style.display="block";
+
+}
+
+
+
+
+
+
+/* Закрытие окон */
+
+
+function closeWindows(){
+
+document
+.querySelectorAll(".window")
+.forEach(
+
+item=>item.style.display="none"
+
+);
+
+}
+
+
+
+
+
+
+
+/* Отправка регистрации в Telegram */
+
+
+function sendTelegram(){
+
+
+let name=
+document.getElementById("regName").value;
+
+
+let phone=
+document.getElementById("regPhone").value;
+
+
+let email=
+document.getElementById("regEmail").value;
+
+
+
+let text=
+
+"ALFA Ai Travel - новая регистрация%0A%0A"+
+
+"ФИО: "+name+"%0A"+
+
+"Телефон: "+phone+"%0A"+
+
+"Почта: "+email;
+
+
+
+window.open(
+
+"https://t.me/kimand8?text="+text,
+
+"_blank"
+
+);
+
+
+}
 
 
 </script>
